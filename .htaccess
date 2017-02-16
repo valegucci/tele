@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteBase /telematics/
+Options -Indexes
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^vendor/(.*)$ single.php?vendor=$1
